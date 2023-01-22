@@ -43,7 +43,6 @@ class QuraanContantActivity : AppCompatActivity() {
     fun readFileText() {
         val fileName = "${SuraPosition?.plus(1)}.txt"
         var FileContent = assets.open(fileName).bufferedReader().use { it.readText() }
-
         // var SuraContent= FileContent.split('\n')
         tv_sura_content.text = FileContent
         //.toString()

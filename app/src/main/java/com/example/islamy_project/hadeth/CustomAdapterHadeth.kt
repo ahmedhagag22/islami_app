@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.islamy_project.R
 
-class CustomAdapterHadeth(var items: List<DataClassHadeth>) :
+class CustomAdapterHadeth(var items: List<String>) :
     RecyclerView.Adapter<CustomAdapterHadeth.ViewHolder>() {
     // TODO:  inflat للعناصر اللي موجوده في تصميم الايتم بتاع الريسايكلر
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,8 +24,8 @@ class CustomAdapterHadeth(var items: List<DataClassHadeth>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             var itemview=items[position]
-        holder.name.setText(itemview.names)
-      //  holder.name.text= items.get(position).toString()
+        holder.name.setText(itemview)
+
 
 
         if(OnHadethClickListner!=null)
@@ -42,6 +42,6 @@ class CustomAdapterHadeth(var items: List<DataClassHadeth>) :
     var OnHadethClickListner:OnItemClickListner?=null
 
     interface OnItemClickListner{
-        fun OnItemClick(position: Int, HadethName: DataClassHadeth)
+        fun OnItemClick(position: Int, HadethName: String)
     }
 }

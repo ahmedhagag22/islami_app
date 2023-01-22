@@ -36,11 +36,11 @@ class HadethContantActivity : AppCompatActivity()
     }
 
     fun readFileText() {
-        val fileName = "ahadeth.txt"
+        val fileName = "h${HadethPosition?.plus(1)}.txt"
         var FileContent = assets.open(fileName).bufferedReader().use { it.readText() }
-
-        var SuraContent= FileContent.split('#')
-        ContantHadeth.text= SuraContent.toString()
+        //var SuraContent= FileContent.split("/n")
+        ContantHadeth.text= FileContent
+            //.toString()
 
 }
 }
