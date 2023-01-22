@@ -25,20 +25,20 @@ class HadethFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data = ArrayList<DataClassHadeth>()
-        for (i in 1..50) {
-            data.add(DataClassHadeth("الحديث رقم " + "$i"))
-        }
+//        val data = ArrayList<DataClassHadeth>()
+//        for (i in 1..50) {
+//            data.add(DataClassHadeth("الحديث رقم " + "$i"))
+//        }
 
-        adapter = CustomAdapterHadeth(data)
+        adapter = CustomAdapterHadeth(listhadeth)
 
         adapter.OnHadethClickListner = object : CustomAdapterHadeth.OnItemClickListner {
-            override fun OnItemClick(position: Int, items: DataClassHadeth) {
+            override fun OnItemClick(position: Int, items: String) {
 
                 var Intent = Intent(activity, HadethContantActivity::class.java)
 
                 Intent.putExtra(constant.EXTRA_HADETH_POSITION,position)
-                Intent.putExtra(constant.EXTRA_HADETH_NAME, "$items")
+                Intent.putExtra(constant.EXTRA_HADETH_NAME, items)
 
                 startActivity(Intent)
             }

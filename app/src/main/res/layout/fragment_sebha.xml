@@ -63,19 +63,21 @@
 
     <TextView
         android:id="@+id/tv_convert_sobhan_aaalh"
+        android:background="@drawable/shape_text_tasbeh"
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
-        tools:text="@string/elketma"
-        android:background="@drawable/shape_number_tasbeh"
+        android:fontFamily="@font/lobster"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="27dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/TheNumber"
         app:layout_constraintEnd_toEndOf="@id/TheNumber"
         app:layout_constraintStart_toStartOf="@id/TheNumber"
-        android:fontFamily="@font/lobster"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp" />
+        tools:text="@string/elketma"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
