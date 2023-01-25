@@ -1,8 +1,8 @@
 package com.example.islamy_project.hadeth
 
 data class DataClassHadeth(
-    var  names:String
-
+    var title:String?=null,
+    var content:String?=null
     )
 var listhadeth = listOf(
     "الحديث الاول ",
