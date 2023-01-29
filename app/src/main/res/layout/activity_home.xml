@@ -18,13 +18,12 @@
             android:layout_height="match_parent">
 
             <TextView
+                style="@style/txtToolbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/islami"
-                android:fontFamily="@font/lobster"
-                android:textColor="@color/alltextview_blackLight"
-                android:textSize="35sp" />
+                 />
 
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>

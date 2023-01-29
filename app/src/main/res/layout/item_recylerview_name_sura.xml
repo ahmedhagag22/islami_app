@@ -11,13 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="البقرة"
-        android:textSize="22sp"
+
           app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/black"
-        android:fontFamily="@font/regular"
-        android:textStyle="bold"
+        style="@style/txt_fragment_quran"
+
         />
     <TextView
         android:id="@+id/txt_view_item_quran_num"
@@ -27,10 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_height="wrap_content"
         tools:text="286"
-        android:fontFamily="@font/lobster"
-        android:textSize="22sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        style="@style/txt_fragment_quran"
         />
 
     <View
