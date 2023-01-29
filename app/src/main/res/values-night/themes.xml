@@ -13,24 +13,28 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="txtToolbar">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/lobster</item>
     </style>
+
     <style name="txt_fragment_quran">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/lobster</item>
     </style>
+
     <style name="txt_title_quran">
         <item name="android:textColor">@color/yellow</item>
         <item name="android:textSize">35sp</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/lobster</item>
     </style>
+
     <style name="txt_contant_quran">
         <item name="android:textColor">@color/yellow</item>
         <item name="android:textSize">30sp</item>
@@ -44,6 +48,7 @@
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/lobster</item>
     </style>
+
     <style name="bakg_cardview_hadeth">
         <item name="android:backgroundTint">@color/navy_blue</item>
     </style>
@@ -54,9 +59,8 @@
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/regular</item>
     </style>
-    <style name="bakground_nav">
-        <item name="android:background">@color/navy_blue</item>
-    </style>
+
+
     <style name="img">
         <item name="android:background">@drawable/splash_dark</item>
     </style>
@@ -70,13 +74,14 @@
     </style>
 
 
-
     <style name="headSebha">
         <item name="android:src">@drawable/head_sebha_logo_dark</item>
     </style>
+
     <style name="bodySebha">
         <item name="android:src">@drawable/body_sebha_logo_dark</item>
     </style>
+
     <style name="numtasbeh">
         <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
@@ -85,16 +90,51 @@
     </style>
 
     <style name="prograss">
-    <item name="android:indeterminateTint">@color/white
-    </item>
+        <item name="android:indeterminateTint">@color/white
+        </item>
     </style>
+
     <style name="title_number_quran">
 
-        <item name="android:textSize">30sp </item>
-        <item name="android:fontFamily">@font/lobster </item>
-        <item name="android:textColor">@color/white </item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">@font/lobster</item>
+        <item name="android:textColor">@color/white</item>
 
     </style>
 
+    <style name="select">
+        <item name="android:background">@color/navy_blue</item>
+        <item name="itemTextColor">@color/nav_selector_dark</item>
+        <item name="itemIconTint">@color/nav_selector_dark</item>
+
+    </style>
+
+    <style name="radiotxt">
+        <item name="android:textSize">35sp</item>
+        <item name="android:fontFamily">@font/lobster</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="sebha_txt_bakg">
+        <item name="android:backgroundTint">@color/yellow
+        </item>
+        <item name="android:textColor">@color/navy_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/lobster</item>
+
+    </style>
+
+
+    <style name="sebha_number">
+        <item name="android:backgroundTint">@color/navy_blue
+        </item>
+
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/lobster</item>
+
+    </style>
 
 </resources>

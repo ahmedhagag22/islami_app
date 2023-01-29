@@ -19,6 +19,7 @@
             android:src="@drawable/radio_image"/>
 
     <TextView
+        style="@style/radiotxt"
         android:id="@+id/tv_activty_radio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,10 +27,7 @@
         app:layout_constraintEnd_toEndOf="@id/image_radio"
         app:layout_constraintStart_toStartOf="@id/image_radio"
         android:text="@string/ezat_elquran_elkarem"
-        android:fontFamily="@font/lobster"
-        android:textColor="@color/alltextview_blackLight"
         android:layout_marginTop="25dp"
-        android:textSize="35sp"
 
         />
 
@@ -39,6 +37,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_activty_radio"
         android:src="@drawable/play"
+
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="@id/tv_activty_radio"
         app:layout_constraintStart_toStartOf="@id/tv_activty_radio"

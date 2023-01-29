@@ -7,8 +7,8 @@
     tools:context=".quran.QuranFragment">
 
     <ImageView
-        style="@style/headSebha"
         android:id="@+id/img_head_sebha"
+        style="@style/headSebha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -16,9 +16,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            style="@style/bodySebha"
+    <ImageView
         android:id="@+id/img_body_sebha"
+        style="@style/bodySebha"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="-30dp"
@@ -27,50 +27,46 @@
         app:layout_constraintTop_toBottomOf="@id/img_head_sebha" />
 
     <TextView
-        style="@style/numtasbeh"
         android:id="@+id/tv_add_elsbha"
+        style="@style/numtasbeh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/add_eltasbeh"        app:layout_constraintEnd_toEndOf="@id/img_body_sebha"
+        android:text="@string/add_eltasbeh"
+        app:layout_constraintEnd_toEndOf="@id/img_body_sebha"
         app:layout_constraintStart_toStartOf="@id/img_body_sebha"
         app:layout_constraintTop_toBottomOf="@id/img_body_sebha"></TextView>
 
     <TextView
-
         android:id="@+id/TheNumber"
-        android:layout_marginTop="20dp"
-        android:paddingVertical="20dp"
-       android:paddingHorizontal="30dp"
+        style="@style/sebha_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_add_elsbha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="0"
-        android:textStyle="bold"
-        android:textColor="@color/alltextview_blackLight"
+        android:layout_marginTop="20dp"
         android:background="@drawable/shape_number_tasbeh"
-        android:textSize="30sp"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_elsbha"
+
         />
 
     <TextView
         android:id="@+id/tv_convert_sobhan_aaalh"
+        style="@style/sebha_txt_bakg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
         android:background="@drawable/shape_text_tasbeh"
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
-        android:fontFamily="@font/lobster"
-        android:textStyle="bold"
-        android:textColor="@color/white"
         android:textSize="20sp"
-        android:layout_marginTop="27dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/TheNumber"
         app:layout_constraintEnd_toEndOf="@id/TheNumber"
         app:layout_constraintStart_toStartOf="@id/TheNumber"
-        tools:text="@string/elketma"
-         />
+        app:layout_constraintTop_toBottomOf="@id/TheNumber"
+        tools:text="@string/elketma" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
