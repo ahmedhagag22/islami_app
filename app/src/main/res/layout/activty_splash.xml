@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginBottom="150dp"
-        android:indeterminateTint="@color/gold" />
+       style="@style/prograss"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

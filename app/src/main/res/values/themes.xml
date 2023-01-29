@@ -50,6 +50,12 @@
     <style name="bakg_cardview_hadeth">
        <item name="android:backgroundTint">@color/gold</item>
     </style>
+    <style name="bkg_contant">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+    <style name="bakground_nav">
+        <item name="android:background">@color/gold</item>
+    </style>
     <style name="img">
         <item name="android:background">@drawable/splash</item>
     </style>
@@ -61,7 +67,39 @@
         <item name="fontFamily">@font/regular</item>
     </style>
 
+    <style name="img_bkg_app">
+        <item name="android:background">@drawable/default_bg</item>
+    </style>
 
+<style name="headSebha">
+    <item name="android:src">@drawable/head_sebha_logo_night</item>
+</style>
+<style name="bodySebha">
+    <item name="android:src">@drawable/body_sebha_logo_night</item>
+</style>
+
+    <style name="numtasbeh">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:textColor">@color/alltextview_blackLight</item>
+    </style>
+
+    <style name="prograss">
+        <item name="android:indeterminateTint">@color/gold
+        </item>
+    </style>
+
+
+
+
+    <style name="title_number_quran">
+
+        <item name="android:textSize">30sp </item>
+        <item name="android:fontFamily">@font/lobster </item>
+        <item name="android:textColor">@color/alltextview_blackLight </item>
+
+    </style>
 
 
 

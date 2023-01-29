@@ -7,39 +7,32 @@
     tools:context=".quran.QuranFragment">
 
     <ImageView
+        style="@style/headSebha"
         android:id="@+id/img_head_sebha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-
-
-
-        android:src="@drawable/head_sebha_logo_night"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            style="@style/bodySebha"
         android:id="@+id/img_body_sebha"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="-30dp"
-        android:src="@drawable/body_sebha_logo_night"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_head_sebha" />
 
     <TextView
+        style="@style/numtasbeh"
         android:id="@+id/tv_add_elsbha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:fontFamily="@font/regular"
-        android:text="@string/add_eltasbeh"
-        android:textColor="@color/alltextview_blackLight"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/img_body_sebha"
+        android:text="@string/add_eltasbeh"        app:layout_constraintEnd_toEndOf="@id/img_body_sebha"
         app:layout_constraintStart_toStartOf="@id/img_body_sebha"
         app:layout_constraintTop_toBottomOf="@id/img_body_sebha"></TextView>
 
