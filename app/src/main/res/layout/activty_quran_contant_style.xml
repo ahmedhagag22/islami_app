@@ -8,7 +8,7 @@
 
 
     <androidx.cardview.widget.CardView
-
+       style="@style/bkg_contant"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"
@@ -21,16 +21,12 @@
             android:layout_height="match_parent">
 
             <TextView
-
+            style="@style/txt_title_quran"
                 android:id="@+id/sura_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:fontFamily="@font/lobster"
                tools:text="@string/suraname"
-                android:textColor="@color/black"
-                android:textSize="35sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -68,16 +64,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
             <TextView
+                style="@style/txt_contant_quran"
                     android:id="@+id/ContentSura"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
                 android:paddingHorizontal="17dp"
               tools:text="@string/fatha"
-                android:fontFamily="@font/dthuluth"
-               android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
+
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

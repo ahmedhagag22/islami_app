@@ -3,15 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
     <androidx.cardview.widget.CardView
+        style="@style/bkg_contant"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"
+
         android:elevation="800dp"
         app:cardCornerRadius="20dp">
 
@@ -22,15 +25,12 @@
 
             <TextView
 
+                style="@style/txt_title_quran"
                 android:id="@+id/Hadeth_Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:fontFamily="@font/lobster"
                tools:text="الحديث الاول "
-                android:textColor="@color/black"
-                android:textSize="35sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -56,16 +56,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
             <TextView
+                style="@style/txt_contant_quran"
                     android:id="@+id/ContentHadeth"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="30dp"
                 android:paddingHorizontal="17dp"
               tools:text="@string/numberofhadteh"
-                android:fontFamily="@font/dthuluth"
-               android:textColor="@color/black"
-                android:textSize="26sp"
-                android:textStyle="bold"
+
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

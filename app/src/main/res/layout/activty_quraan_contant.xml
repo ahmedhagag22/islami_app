@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/default_bg">
+    style="@style/img_bkg_app">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,8 +21,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/lobster"
                 android:text="@string/islami"
-                android:textColor="@color/alltextview_blackLight"
-                android:textSize="35sp" />
+                style="@style/txtToolbar"/>
 
             <ImageView
                 android:id="@+id/back"

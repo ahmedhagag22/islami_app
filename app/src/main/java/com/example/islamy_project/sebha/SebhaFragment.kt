@@ -1,23 +1,22 @@
 package com.example.islamy_project.sebha
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.islamy_project.R
+import androidx.fragment.app.Fragment
 import com.example.islamy_project.constant
 import com.example.islamy_project.databinding.FragmentSebhaBinding
 
 
 class SebhaFragment : Fragment() {
-    lateinit var img_view: ImageView
-    lateinit var txtview_convert: TextView
-    lateinit var txtview_counter: TextView
     lateinit var viewBinding: FragmentSebhaBinding
+    lateinit var iv_seb7a: ImageView
+    lateinit var tv_counter: TextView
+    lateinit var tv_conver: TextView
+
     var counter = 0
 
 
@@ -26,63 +25,52 @@ class SebhaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        viewBinding = FragmentSebhaBinding.inflate(layoutInflater, container, false)
+        viewBinding = FragmentSebhaBinding.inflate(inflater, container, false)
         return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        txtview_convert = viewBinding.tvConvertSobhanAaalh
-        txtview_convert.text=constant.SOBHANALLAH
-        img_view = viewBinding.imgBodySebha
-        txtview_counter = viewBinding.TheNumber
-        txtview_counter.text = "$counter"
+        iv_seb7a = viewBinding.imgBodySeb7a
+        tv_counter = viewBinding.counterSeb7a
+        tv_conver = viewBinding.converText
+
+        tv_conver.text = constant.SOBHANALLAH
+        tv_counter.text = "$counter"
+
+        iv_seb7a.setOnClickListener {
+            onClickSeb7aImage()
+
+        }
 
 
-
-        img_view.setOnClickListener(View.OnClickListener {
-            OnClickSebhaImage()
-
-        })
     }
 
-    fun OnClickSebhaImage() {
-        img_view.rotation = img_view.rotation + 5
-
+    fun onClickSeb7aImage() {
+        iv_seb7a.rotation = iv_seb7a.rotation + 5
         counter++
-        txtview_counter.text = "$counter"
+        tv_counter.text = "$counter"
 
-        if(txtview_convert.text==constant.ELKETMA)
-        {
-            txtview_convert.text = constant.SOBHANALLAH
+        if (tv_conver.text == constant.ELKETMA) {
+            tv_conver.text = constant.ELKETMA
             counter = 0
-            txtview_counter.text = "$counter"
+            tv_counter.text = "$counter"
         }
-
         if (counter == 33) {
-            if (txtview_convert.text == constant.SOBHANALLAH) {
-                txtview_convert.text = constant.ELHAMDOLLAH
-                counter = 0
-                txtview_counter.text = "$counter"
-            } else if( txtview_convert.text==constant.ELHAMDOLLAH)
-
-                {
-                  txtview_convert.text=constant.ALLAHAKBR
-                    counter = 0
-                    txtview_counter.text = "$counter"
-
-                }
-            else if (txtview_convert.text==constant.ALLAHAKBR)
-            {
-                txtview_convert.text=constant.ELKETMA
-                counter = 0
-                txtview_counter.text = "$counter"
-            }
+            if (tv_conver.text == constant.SOBHANALLAH)
+                tv_conver.text = constant.ELHAMDOLLAH
+            counter = 0
+            tv_counter.text = "$counter"
+        } else if (tv_conver.text == constant.ELHAMDOLLAH) {
+            tv_conver.text = constant.ALLAHAKBR
+            counter = 0
+            tv_counter.text = "$counter"
+        } else if (tv_conver.text == constant.ALLAHAKBR) {
+            tv_conver.text = constant.ELKETMA
+            counter = 0
+            tv_counter.text = "$counter"
 
         }
-
     }
-
-
 }
          
