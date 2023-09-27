@@ -165,7 +165,7 @@ class PlayService : Service() {
         intent.putExtra("action", PLAY_ACTION)
         val pendingIntent = PendingIntent.getService(
             this,
-            12, intent, PendingIntent.FLAG_UPDATE_CURRENT
+            12, intent, PendingIntent.FLAG_IMMUTABLE
         );
         return pendingIntent;
 
@@ -176,7 +176,7 @@ class PlayService : Service() {
         intent.putExtra("action", STOP_ACTION)
         val pendingIntent = PendingIntent.getService(
             this,
-            0, intent, PendingIntent.FLAG_UPDATE_CURRENT
+            0, intent, PendingIntent.FLAG_IMMUTABLE
         );
         return pendingIntent;
 

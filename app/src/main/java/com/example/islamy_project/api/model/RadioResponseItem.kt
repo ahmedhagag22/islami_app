@@ -6,6 +6,6 @@ data class RadioResponseItem(
     @field:SerializedName("name")
     val name: String? = null,
 
-    @field:SerializedName("radio_url")
+    @field:SerializedName("url")
     val radioUrl: String? = null
 )

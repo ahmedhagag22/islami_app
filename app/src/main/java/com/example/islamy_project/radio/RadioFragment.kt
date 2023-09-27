@@ -127,7 +127,7 @@ class RadioFragment : Fragment() {
                     call: Call<RadioResponse>,
                     response: Response<RadioResponse>
                 ) {
-               Log.e("resonse","respo")
+               Log.e("resonse",response.body()?.radios.toString())
 
                     val channels = response.body()?.radios;
                     adapter.changeData(channels ?: listOf())
