@@ -10,6 +10,6 @@ object constant {
     var ELHAMDOLLAH="الحمدلله"
     var ALLAHAKBR="الله واكبر "
     var ELKETMA=" لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير"
-    var BASEURL="https://api.mp3quran.net"
+    var BASEURL="https://mp3quran.net/api/v3/"
 
 }

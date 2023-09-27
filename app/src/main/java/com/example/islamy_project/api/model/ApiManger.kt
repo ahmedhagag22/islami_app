@@ -33,7 +33,8 @@ class ApiManger {
                     //2
                     .client(okHttpClient)
                     .baseUrl(constant.BASEURL)
-                    .addConverterFactory(GsonConverterFactory.create()).build()
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
 
             }
             return retrofit!!

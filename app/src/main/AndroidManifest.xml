@@ -18,6 +18,7 @@
         android:label="@string/eslami"
         android:roundIcon="@drawable/logoapp"
         android:supportsRtl="true"
+        android:name=".MyApplication"
         android:theme="@style/Theme.Islamy_project"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">

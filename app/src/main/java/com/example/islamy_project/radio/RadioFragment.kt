@@ -1,13 +1,18 @@
 package com.example.islamy_project.radio
 
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.ServiceConnection
 import android.os.Bundle
+import android.os.IBinder
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.islamy_project.R
 
 import com.example.islamy_project.api.model.ApiManger
 import com.example.islamy_project.api.model.RadioResponse
@@ -17,12 +22,13 @@ import com.example.islamy_project.player.PlayService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.math.log
 
 
 class RadioFragment : Fragment() {
     val adapter = RadioAdapter()
-
     lateinit var viewBinding: FragmentRadioBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,14 +40,16 @@ class RadioFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewBinding.radioRv.adapter = adapter
 
         adapter.onItemClickPlay = object : OnItemClickListener {
             override fun onItemClick(position: Int, item: RadioResponseItem) {
                 startRadioService(item)
             }
+
         }
-        adapter.onItemClickStop=object :OnItemClickListener{
+        adapter.onItemClickStop = object : OnItemClickListener {
             override fun onItemClick(position: Int, item: RadioResponseItem) {
                 stopPlayerService()
             }
@@ -66,7 +74,7 @@ class RadioFragment : Fragment() {
 
     override fun onStop() {
         super.onStop()
-      //  activity?.unbindService(connection)
+        activity?.unbindService(connection)
     }
 
     fun bindService() {
@@ -75,13 +83,8 @@ class RadioFragment : Fragment() {
     }
 
     private fun startRadioService(item: RadioResponseItem) {
-        if (bound)
-            service.startMediaPlayer(item.radioUrl!!, item.name!!);
-        /*
-                val intent = Intent(activity,PlayerService::class.java)
-                intent.putExtra("url",item)
-                activity?.startService(intent);
-        */
+        if (bound && item.radioUrl != null && item.name != null)
+            service.startMediaPlayer(item.radioUrl  ,item.name);
     }
 
     fun stopPlayerService() {
@@ -97,8 +100,8 @@ class RadioFragment : Fragment() {
 
         override fun onServiceConnected(className: ComponentName, mBinder: IBinder) {
             // We've bound to LocalService, cast the IBinder and get LocalService instance
-            val binder = mBinder as PlayerService.MyBinder
-            service = mBinder.getService()
+            val binder = mBinder as PlayService.MyBinder
+            service = binder.getService()
             bound = true
         }
 
@@ -108,24 +111,27 @@ class RadioFragment : Fragment() {
     }
 
     private fun getChannelsFromApi() {
+        Log.e("getapi","getapi")
 
         //show loading dialog
-    ApiManger.getWebService()
-        .getRadio()
-        .enqueue(object :Callback<RadioResponse>{
-            override fun onResponse(call: Call<RadioResponse>, response: Response<RadioResponse>) {
-               val channels=response.body()?.radios
-                adapter.changeData(channels)
-            }
+        ApiManger.getWebService()
+            .getRadio()
+            .enqueue(object : Callback<RadioResponse> {
+                override fun onFailure(call: Call<RadioResponse>, t: Throwable) {
+                    //hideloadingDialog
+                    Toast.makeText(activity, t.localizedMessage ?: "error", Toast.LENGTH_LONG)
+                        .show()
+                }
 
-            override fun onFailure(call: Call<RadioResponse>, t: Throwable) {
-                Toast.makeText(activity, t.localizedMessage ?: "error", Toast.LENGTH_LONG)
-                    .show()
-            }
+                override fun onResponse(
+                    call: Call<RadioResponse>,
+                    response: Response<RadioResponse>
+                ) {
+               Log.e("resonse","respo")
 
-        })
+                    val channels = response.body()?.radios;
+                    adapter.changeData(channels ?: listOf())
+                }
+            })
     }
-
-
 }
-         

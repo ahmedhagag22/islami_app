@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 
 class RadioResponse (
     @field:SerializedName("radios")
-    val radios: List<RadioResponseItem?>? = null
+    val radios: List<RadioResponseItem>?=null
 )

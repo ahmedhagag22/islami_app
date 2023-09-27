@@ -8,7 +8,7 @@ import com.example.islamy_project.api.model.RadioResponseItem
 import com.example.islamy_project.databinding.ItemRadioBinding
 
 class RadioAdapter() : RecyclerView.Adapter<RadioAdapter.ViewHolder>() {
-    var channels = listOf<RadioResponseItem?>()
+    var channels = listOf<RadioResponseItem>()
     var onItemClickPlay: OnItemClickListener? = null
     var onItemClickStop: OnItemClickListener? = null
     lateinit var viewBinding: ItemRadioBinding

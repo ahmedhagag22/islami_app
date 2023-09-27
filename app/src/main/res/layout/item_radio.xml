@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/radioName_tv"
@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text=" إذاعة شيخ أبو بكر الشاطري" />
+        tools:text=" إذاعة شيخ أبو بكر الشاطري"
+        android:text="jghfhfvhvcg"/>
 
     <ImageView
         android:id="@+id/ic_play"
